@@ -1,0 +1,20 @@
+name: Workflow with Email Step
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Step containing email 23f1001986@ds.study.iitm.ac.in
+      run: echo "This step contains the email address in its name"
+
+    - name: Regular build step
+      run: echo "Performing regular build actions"
